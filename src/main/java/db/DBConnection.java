@@ -8,7 +8,7 @@ public class DBConnection {
     public static Connection getInstance(){
         String username = "root";
         String password = "1234";
-        String url = "jdbc:mariadb://127.0.0.1:3306/cosdb";
+        String url = "jdbc:mariadb://127.0.0.1:3306/cosdb2";
 
         // 프로토콜이 적용된 소켓
         try {
@@ -16,7 +16,8 @@ public class DBConnection {
             System.out.println("db connect success");
             return conn;
         } catch (Exception e) {
-            throw new RuntimeException(e); // 호출하는 놈(JVM)에 예외를 던짐
+            e.printStackTrace();
         }
+        return null;
     }
 }
